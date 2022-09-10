@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imagesRef = document.querySelector('.gallery')
+
+const listItem = images.map(image => `<li><img class="picture" src=${image.url} width = '500' alt='${image.alt}'></img></li>`).join('')
+
+imagesRef.insertAdjacentHTML('beforeend', listItem)
+
+imagesRef.style.listStyle = 'none'
+imagesRef.style.display = 'flex'
+imagesRef.style.justifyContent = 'space-around'
+imagesRef.style.background = 'tomato'
