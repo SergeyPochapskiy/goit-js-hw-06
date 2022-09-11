@@ -1,5 +1,5 @@
 const createBoxes = amount => {
-	const boxesAdd = []
+	let boxesAdd = []
 	for (let i = 0; i < amount; i++) {
 		const div = document.createElement('div')
 		div.style.height = `${30 + 10 * i}px`
@@ -31,5 +31,5 @@ buttonCreateRef.addEventListener('click', () => {
 console.log(inputControlsRef.value)
 
 buttonDestroyRef.addEventListener('click', () => {
-	destroyBoxes.call()
+	destroyBoxes.call([])
 })
