@@ -8,13 +8,11 @@ const ingredients = [
 ];
 
 const IngredientsRef = document.querySelector('#ingredients')
-const liArray = []
-
-ingredients.forEach(ingredient => {
+const liArray = ingredients.map(ingredients => {
 	const item = document.createElement('li')
-	item.textContent = ingredient
+	item.textContent = ingredients
   item.className = 'item'
-	liArray.push(item)
+	return item
 })
 
 
